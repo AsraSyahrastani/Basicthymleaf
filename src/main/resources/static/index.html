@@ -6,18 +6,18 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>First view</title>
+        <title>view</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <div>Masukan Data</div>
         <hr />
-        <form action="/lgn">
-            NAMA            : <input type="text" name="inputnama"/><br><br>
-            Tanggal Lahir   : <input type="date" name="inputedate"/><br><br>  
-            Masukan Gambar  : <input type="file" name="inputfile"/><br><br>
-            <input type="submit" name="klik"/><br><br>
+        <form method="post" enctype="multipart/form-data" action="/login">
+            NAMA: <input type="text" name="inputnama"/><br><br>
+            Tanggal Lahir: <input type="date" name="inputdate"/><br><br>  
+            Masukan Gambar: <input type="file" id="img" name="inputfile" accept="image/png, image/jpeg" required=""/><br><br>
+            <input type="submit" name="submit"/><br><br>
         </form>
     </body>
 </html>
